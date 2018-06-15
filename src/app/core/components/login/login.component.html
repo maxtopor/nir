@@ -1,0 +1,14 @@
+<mat-card class ='card'>
+  <mat-card-title class="text-center">Авторизация</mat-card-title>
+  <div *ngIf="isAlert()" class = "alert alert-danger">{{status}}</div>
+  <form [formGroup] = 'form' class = 'login-form' >
+    <mat-form-field class="example-full-width">
+      <input matInput class = 'input'placeholder="E-mail" formControlName ='username'>    
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput class = 'input' type = 'password' placeholder="пароль" formControlName ='password'>
+    </mat-form-field>
+    <button type="submit" mat-raised-button color="primary" (click) ='login()'>Войти</button>
+  </form>
+</mat-card>
+
